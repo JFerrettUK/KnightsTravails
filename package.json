@@ -1,0 +1,25 @@
+{
+  "name": "knightstravails",
+  "version": "1.0.0",
+  "description": "knightMoves  shows the shortest possible way for a knight in chess to get from one square to another by outputting all squares the knight will stop on along the way.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFerrettUK/KnightsTravails.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JFerrettUK/KnightsTravails/issues"
+  },
+  "homepage": "https://github.com/JFerrettUK/KnightsTravails#readme",
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
