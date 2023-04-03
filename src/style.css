@@ -29,3 +29,7 @@ body {
 .chessSquareBlack {
     background-color: rgb(182, 150, 119);
 }
+
+#knightPic {
+    height: 40px;
+}
