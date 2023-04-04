@@ -24,10 +24,12 @@ body {
 
 .chessSquareWhite{
     background-color: antiquewhite;
+    color: rgb(182, 150, 119);
 }
 
 .chessSquareBlack {
     background-color: rgb(182, 150, 119);
+    color: antiquewhite;
 }
 
 #knightPic {

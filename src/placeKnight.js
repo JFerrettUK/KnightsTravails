@@ -1,5 +1,3 @@
-import knightPic from '/src/knightPic.png';
-
 export default function placeKnight(square) {
     if (document.getElementById('knightPic')) {
         const oldKnight = document.getElementById('knightPic');

@@ -19,12 +19,14 @@ export default function makeBoard() {
             document.getElementById("chessBoard").appendChild(chessSquare);
         }
     }
-    makeWhiteRow(8)
-    makeBlackRow(7)
-    makeWhiteRow(6)
-    makeBlackRow(5)
-    makeWhiteRow(4)
-    makeBlackRow(3)
-    makeWhiteRow(2)
-    makeBlackRow(1)
+    
+    function makeRows () {
+        for (let i = 1; i < 9; i++) {
+            makeWhiteRow(i)
+            i++
+            makeBlackRow(i)               
+        }
+    }
+
+    makeRows()
 }
