@@ -1,3 +1,5 @@
+import numberToSquare from "./numberToSquare.js";
+
 export default function makeBoard() {
     function makeWhiteRow(no) {
         for (let i = 0; i < 8; i++) {
