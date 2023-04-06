@@ -23,9 +23,9 @@ export default function makeBoard() {
     }
     
     function makeRows () {
-        for (let i = 1; i < 9; i++) {
+        for (let i = 8; i > 0; i--) {
             makeWhiteRow(i)
-            i++
+            i--
             makeBlackRow(i)               
         }
     }
