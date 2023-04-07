@@ -1,5 +1,5 @@
 export default function chessGraph() {
-    const board = [  
+    const matrix = [  
         ["a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8"],
         ["a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7"],
         ["a6", "b6", "c6", "d6", "e6", "f6", "g6", "h6"],
@@ -10,7 +10,7 @@ export default function chessGraph() {
         ["a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1"],
     ];
 
-    const chessboardGraph = {
+    const adjacencyList = {
         a8: ["b8", "a7", "b7"],
         b8: ["a8", "c8", "a7", "b7", "c7"],
         c8: ["b8", "d8", "b7", "c7", "d7"],
@@ -77,34 +77,39 @@ export default function chessGraph() {
         h1: ["g1", "g2", "h2"]
     }
 
+    // All it means is that the Knight needs to take 3 steps to reach 
+    // its target, as long as it doesnt repeat itself!
+
     //bfs:
 
-    //from your starting node, add all of your direct children to a queue
+    //let q = [s]
+    let queue = []
+    let visited = []
 
-    // //let q = [s]
-    // let queue = [s]
-    // let n = []
+    // Start by selecting a starting node or vertex in the graph or tree
+    // to begin the search.
 
-    // // while queue is not empty
-    // while (queue.length > 0) {
-    //     // n = queue.dequeue()
-    //     // dequeue = to remove (an item) from a queue of tasks
-    //     n.push(queue.shift(0))
-
-    //     // for v of n.children:
-    //     for (let v = 0; v < array.length; v++) {
-    //         // queue.enqueue(v)
-    //         queue.unshift(v)
-    //     }
-    // }
+    // Add the starting node to a queue, which will be used to keep 
+    // track of the nodes that need to be visited.
     
-    const newGraph = {};
-
-    // Create vertices and edges
-    for (const vertex in chessboardGraph) {
-        newGraph[vertex] = chessboardGraph[vertex];
-    }
+    // While the queue is not empty, remove the first node
+    // from the queue and examine its neighbors.
     
-    // Print the graph
-    console.log(newGraph);
+    // For each neighbor of the current node that has not been visited,
+    // add it to the queue and mark it as visited.
+    
+    // Repeat steps 3 and 4 until the queue is
+    // empty or the desired node is found.
+    
+    // If the desired node is found, stop the search and 
+    // return the result. Otherwise, the search will continue
+    //  until all reachable nodes have been visited.
+    
+    
+
+    console.log(adjacencyList);
+
+      
+      // Test the bfs function
+      
 }
