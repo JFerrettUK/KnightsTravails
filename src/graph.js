@@ -76,4 +76,35 @@ export default function chessGraph() {
         g1: ["e1", "g1", "e2", "f2", "g2"],
         h1: ["g1", "g2", "h2"]
     }
+
+    //bfs:
+
+    //from your starting node, add all of your direct children to a queue
+
+    // //let q = [s]
+    // let queue = [s]
+    // let n = []
+
+    // // while queue is not empty
+    // while (queue.length > 0) {
+    //     // n = queue.dequeue()
+    //     // dequeue = to remove (an item) from a queue of tasks
+    //     n.push(queue.shift(0))
+
+    //     // for v of n.children:
+    //     for (let v = 0; v < array.length; v++) {
+    //         // queue.enqueue(v)
+    //         queue.unshift(v)
+    //     }
+    // }
+    
+    const newGraph = {};
+
+    // Create vertices and edges
+    for (const vertex in chessboardGraph) {
+        newGraph[vertex] = chessboardGraph[vertex];
+    }
+    
+    // Print the graph
+    console.log(newGraph);
 }
