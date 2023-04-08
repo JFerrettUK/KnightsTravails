@@ -10,7 +10,6 @@ export default function numberToSquare(chessPosition) {
         h: 8,
     };
 
-    console.log(chessPosition)
     const file = letterToNumber[chessPosition[0]];
     const rank = parseInt(chessPosition[1]);
 
