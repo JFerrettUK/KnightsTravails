@@ -1,15 +1,4 @@
 export default function chessGraph() {
-    const boardRepresentation = [  
-        ["a8", "b8", "c8", "d8", "e8", "f8", "g8", "h8"],
-        ["a7", "b7", "c7", "d7", "e7", "f7", "g7", "h7"],
-        ["a6", "b6", "c6", "d6", "e6", "f6", "g6", "h6"],
-        ["a5", "b5", "c5", "d5", "e5", "f5", "g5", "h5"],
-        ["a4", "b4", "c4", "d4", "e4", "f4", "g4", "h4"],
-        ["a3", "b3", "c3", "d3", "e3", "f3", "g3", "h3"],
-        ["a2", "b2", "c2", "d2", "e2", "f2", "g2", "h2"],
-        ["a1", "b1", "c1", "d1", "e1", "f1", "g1", "h1"],
-    ];
-
     const adjacencyList = {
         a8: ["b8", "a7", "b7"],
         b8: ["a8", "c8", "a7", "b7", "c7"],
@@ -75,41 +64,7 @@ export default function chessGraph() {
         f1: ["e1", "g1", "e2", "f2", "g2"],
         g1: ["e1", "g1", "e2", "f2", "g2"],
         h1: ["g1", "g2", "h2"]
-    }
-
-    // All it means is that the Knight needs to take 3 steps to reach 
-    // its target, as long as it doesnt repeat itself!
-
-    //bfs:
-
-    //let q = [s]
-    let queue = []
-    let visited = []
-
-    // Start by selecting a starting node or vertex in the graph or tree
-    // to begin the search.
-
-    // Add the starting node to a queue, which will be used to keep 
-    // track of the nodes that need to be visited.
-    
-    // While the queue is not empty, remove the first node
-    // from the queue and examine its neighbors.
-    
-    // For each neighbor of the current node that has not been visited,
-    // add it to the queue and mark it as visited.
-    
-    // Repeat steps 3 and 4 until the queue is
-    // empty or the desired node is found.
-    
-    // If the desired node is found, stop the search and 
-    // return the result. Otherwise, the search will continue
-    //  until all reachable nodes have been visited.
-    
-    
-
-    console.log(adjacencyList);
-
-      
-      // Test the bfs function
-      
+    }      
+    // Test the bfs function
+    return adjacencyList;
 }
