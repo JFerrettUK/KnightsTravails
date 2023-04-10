@@ -24,11 +24,11 @@ export default function makeBoard() {
     
     function makeRows () {
         for (let i = 8; i > 0; i--) {
-            makeWhiteRow(i)
-            i--
-            makeBlackRow(i)               
+            makeWhiteRow(i);
+            i--;
+            makeBlackRow(i);        
         }
     }
 
-    makeRows()
+    makeRows();
 }

@@ -1,13 +1,17 @@
-import makeBoard from './makeBoard.js';
+import makeBoardVisual from './makeBoardVisual.js';
 import placeKnight from './placeKnight.js';
 import numberToSquare from './numberToSquare.js';
-import chessGraph from './graph.js';
-import bfs from './bfs.js';
+import squareToNumber from './squareToNumber.js';
+import boardData from './boardData.js';
+import calculateKnightMove from './calculateKnightMove.js';
 
 //build a function knightMoves that shows the shortest possible 
-makeBoard();
-let adjacencylist = chessGraph();
-bfs(adjacencylist)
+makeBoardVisual();
+placeKnight("d4")
+let chessboard = boardData();
+console.log(chessboard)
+console.log(squareToNumber("d7"))
+
 
 // Given that you are in a position x,y, a knight piece can 
 // move in these cells: [x+2, y+1], [x+1, y+2], [x+1, y-2] and so on
