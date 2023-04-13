@@ -1,12 +1,9 @@
 import numberToSquare from "./numberToSquare.js";
 import squareToNumber from "./squareToNumber.js";
-import boardData from "./boardData.js";
-import calculateKnightMove from "./calculateKnightMove.js";
 import nodeClass from "./nodeClass.js";
 import bfs from "./bfs.js";
 
 //build a function knightMoves that shows the shortest possible
-let chessboard = boardData();
 bfs(1, 2);
 
 // Given that you are in a position x,y, a knight piece can
