@@ -1,33 +1,34 @@
 import nodeClass from "./nodeClass.js";
 import getNeighbours from "./getNeighbours.js";
 
-export default function bfs(targetRow, targetColumn) {
-  //1. Enqueue x, y as root node
+export default function knightMoves(start, target) {
+  const [targetRow, targetColumn] = target;
   let queue = [];
-  let startNode = nodeClass(0, 0, 0);
+  let startNode = nodeClass(start[0], start[1], 0);
   queue.push(startNode);
 
   const visited = new Set();
 
   while (queue.length > 0) {
-    console.log("whileloopin BFS");
-    //remove node
     const node = queue.shift();
-    const { row, col, level } = node;
+    const { row, col, level, path } = node;
 
-    //process node
-    if (row == targetRow && col == targetColumn) return level;
+    if (row == targetRow && col == targetColumn) {
+      let result = `You made it in ${level} moves! Here's your path:\n`;
+      for (const position of path) {
+        result += `  [${position[0]},${position[1]}]\n`;
+      }
+      return result;
+    }
     visited.add(node.getPositionString());
 
-    //WHAT IF OUT OF BOUNDS - ADD HERE
-
-    //add neighbours
     for (const neighbour of getNeighbours(row, col)) {
       const [neighbourRow, neighbourColumn] = neighbour;
       const neighbourNode = new nodeClass(
         neighbourRow,
         neighbourColumn,
-        level + 1
+        level + 1,
+        path
       );
 
       if (visited.has(neighbourNode.getPositionString())) continue;

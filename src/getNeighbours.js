@@ -1,4 +1,4 @@
-export default function getNeighbours(row, column) {
+export default function getNeighbours(row, col) {
   const directions = [
     [2, 1],
     [2, -1],
@@ -17,7 +17,7 @@ export default function getNeighbours(row, column) {
     console.log(i++);
     const [rowChange, colChange] = direction;
     const neighbourRow = row + rowChange;
-    const neighbourCol = column + colChange;
+    const neighbourCol = col + colChange;
 
     neighbours.push([neighbourRow, neighbourCol]);
   }

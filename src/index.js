@@ -1,10 +1,12 @@
 import numberToSquare from "./numberToSquare.js";
 import squareToNumber from "./squareToNumber.js";
 import nodeClass from "./nodeClass.js";
-import bfs from "./bfs.js";
+import knightMoves from "./knightMoves.js";
+import remadeKnightMoves from "./remadeKnightMoves.js";
 
 //build a function knightMoves that shows the shortest possible
-bfs(1, 2);
+console.log(knightMoves([3, 3], [4, 3]));
+console.log(remadeKnightMoves([3, 3], [4, 3]));
 
 // Given that you are in a position x,y, a knight piece can
 // move in these cells: [x+2, y+1], [x+1, y+2], [x+1, y-2] and so on

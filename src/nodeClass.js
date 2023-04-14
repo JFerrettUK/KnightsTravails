@@ -1,17 +1,18 @@
-export default function nodeClass(row, column, level = null) {
+export default function nodeClass(row, col, level = null, path = []) {
   class Node {
-    constructor(row, column, level) {
+    constructor(row, col, level, path) {
       this.row = row;
-      this.column = column;
+      this.col = col;
       this.level = level;
+      this.path = [...path, [row, col]];
     }
 
     getPositionString() {
-      return `${this.level}, ${this.column}`;
+      return `${this.row}, ${this.col}`;
     }
   }
 
-  let newClass = new Node(row, column, level);
+  let newClass = new Node(row, col, level, path);
 
   return newClass;
 }
