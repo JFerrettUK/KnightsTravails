@@ -14,7 +14,6 @@ export default function getNeighbours(row, col) {
   let i = 0;
 
   for (const direction of directions) {
-    console.log(i++);
     const [rowChange, colChange] = direction;
     const neighbourRow = row + rowChange;
     const neighbourCol = col + colChange;

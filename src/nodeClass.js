@@ -4,7 +4,7 @@ export default function nodeClass(row, col, level = null, path = []) {
       this.row = row;
       this.col = col;
       this.level = level;
-      this.path = [...path, [row, col]];
+      this.path = path;
     }
 
     getPositionString() {
