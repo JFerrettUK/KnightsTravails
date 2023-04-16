@@ -1,5 +1,6 @@
 import nodeClass from "./nodeClass.js";
 import getNeighbours from "./getNeighbours.js";
+import isValid from "./isValid.js";
 
 export default function knightMoves(start, target) {
   // The target row and column are extracted from the target argument.
@@ -52,7 +53,7 @@ export default function knightMoves(start, target) {
 
       // If this neighbor has not been visited before,
       //it’s added to the queue.
-      if (!visited.has(`${newRow},${newCol}`)) {
+      if (isValid(newRow, newCol) && !visited.has(`${newRow},${newCol}`)) {
         let newNode = nodeClass(newRow, newCol, current.level + 1, [
           ...current.path,
           [newRow, newCol],
